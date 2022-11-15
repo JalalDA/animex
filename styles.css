@@ -1,0 +1,356 @@
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Header styles */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#2B1F46 ;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.logo{
+    flex: 2;
+}
+nav{
+    flex: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    z-index: 100;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 4;
+}
+li{
+    cursor: pointer;
+    padding: 10px;
+}
+li:hover{
+    color: #1ABDF2;
+    box-shadow: 1px 1px 1px 1px #1ABDF2;
+    border-radius: 5px;
+}
+.auth{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 2;
+}
+.auth_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border: 1px solid #555555;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.auth_btn:hover{
+    color: #1ABDF2;
+    box-shadow: 1px 1px 1px 1px #1ABDF2;
+}
+.menu_toogle{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    flex-direction: column;
+    row-gap: 5px;
+    position: relative;
+}
+.menu_toogle input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.menu_toogle>span{
+    display: block;
+    height: 6px;
+    width: 40px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+}
+
+/* Main Styles */
+main{
+    background-color: #352360;
+}
+
+/* Hero Styles */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    border-radius: 12px;
+}
+.hero_card{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px;
+    position: relative;
+    background-color:#754672;
+    height: 400px;
+    width: 60%;
+    border-radius: 12px;
+}
+.hero_card_img{
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+.hero_card_content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 50%;
+}
+.hero_card_content_title{
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+.hero_card_content_episode{
+    font-size: 18px;
+    color:#1ABDF2;
+    font-weight: 700;
+}
+.hero_card_content_synopsis{
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.hero_card_content_synopsis > span{
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.hero_card_content_btn{
+    background-color: #352360;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+}
+.hero_card_content_btn:hover{
+    box-shadow: 1px 1px 1px 1px #1ABDF2;
+    color: #1ABDF2;
+}
+
+/* Recent Styles */
+.recent{
+    padding: 25px 100px;
+}
+.recent_card{
+    background-color: #754672;
+    border-radius: 12px;
+    border: 1px solid #1ABDF2;
+}
+.recent_card_title{
+    background-color: #2B1F46;
+    padding: 20px;
+    border-radius: 12px 12px 0px 0px;
+    border: 1px solid #1ABDF2;
+    color: #1ABDF2;
+    font-size: 18px;
+    font-weight: 700;
+}
+.recent_card_content{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.anime_card{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+.anime_card_img{
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.anime_card_img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.anime_card_title{
+    font-size: 18px;
+    font-weight: 700;
+}
+.anime_card_episode{
+    font-weight: 500;
+    opacity: 0.5;
+}
+.anime_card_btn{
+    background-color: #352360;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.anime_card_btn:hover{
+    color: #1ABDF2;
+    font-weight: 700;
+    box-shadow: 1px 1px 1px 1px #1ABDF2;
+    transition: all 0.3s ease-in-out;
+}
+.recent_card_pagination{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    gap: 10px;
+}
+.recent_card_pagination> span.active{
+    height: 8px;
+    width: 40px;
+    border-radius: 4px;
+    background-color: #1ABDF2;
+    opacity: 1;
+}
+.recent_card_pagination > span{
+    height: 8px;
+    width: 20px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    opacity: 0.5;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #2B1F46;
+    padding: 20px;
+}
+.sosmed{
+    display: flex;
+    gap: 40px;
+}
+.sosmed img{
+    cursor: pointer;
+}
+.sosmed img:hover{
+    box-shadow: 1px 1px 1px 1px #1ABDF2;
+    border-radius: 5px;
+}
+@media screen and (max-width:768px){
+    nav{
+        position: absolute;
+        padding-top: 50px;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        background-color: #2B1F46;
+        width: 50%;
+        border-radius: 0px 0px 0px 6px;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s ease-in-out;
+    }
+    nav.show{
+        transform: translateX(0);
+        transition: all 1s ease-in-out;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu_toogle{
+        display: flex;
+    }
+    .auth{
+        gap: 40px;
+    }
+    .hero_card{
+        flex-direction: column;
+        width: 90%;
+        align-items: flex-end;
+    }
+    .recent{
+        padding: 20px;
+    }
+    .recent_card_content{
+        flex-direction: column;
+        row-gap: 50px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    nav{
+        position: absolute;
+        padding-top: 50px;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        background-color: #352360;
+        width: 50%;
+        border-radius: 0px 0px 0px 6px;
+        z-index: -1;
+        transform: translateX(120%);
+        transition: all 1s ease-in-out;
+        width: 80%;
+    }
+    nav.show{
+        transform: translateX(0);
+        transition: all 1s ease-in-out;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu_toogle{
+        display: flex;
+    }
+    .auth{
+        gap: 40px;
+    }
+    .hero_card{
+        flex-direction: column;
+        width: 90%;
+    }
+    .hero_card_content{
+        width: 100%;
+    }
+    .hero_card_img{
+        display: none;
+    }
+}
